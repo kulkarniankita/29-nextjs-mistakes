@@ -1,18 +1,25 @@
+import {
+  UserInfoUncached,
+  UserInfoCached,
+} from "@/components/mistakes/mistake23-demo";
+
 export default function Mistake23Page() {
   return (
     <div>
-      <h1>
-        Using window, document, or event handlers in Server Components
-      </h1>
+      <h1>Not using cache() function for request memoization</h1>
       <p className="text-muted-foreground mt-2">
-        Trying to use window, document, or onClick handlers in Server
-        Components. This forces you to add &apos;use client&apos; and
-        accidentally make huge trees client-only. If it needs browser APIs or
-        event handlers, make it a Client Component and pass in primitive props
-        from the server
+        The cache() function is used to memoize requests. This is important for
+        performance as it allows you to avoid making the same request multiple
+        times within the same render.
       </p>
-      <div className="flex gap-4 my-12 flex-col"></div>
+      <div className="flex gap-6 my-12 flex-col lg:flex-row">
+        <div className="flex-1">
+          <UserInfoUncached />
+        </div>
+        <div className="flex-1">
+          <UserInfoCached />
+        </div>
+      </div>
     </div>
   );
 }
-

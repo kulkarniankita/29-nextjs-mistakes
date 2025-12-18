@@ -1,32 +1,13 @@
+import { FeaturedProductCard } from "@/components/featured-product-card";
 import { RefreshButton } from "@/components/refresh-button";
 import { Card, CardContent, CardTitle } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import { getFeaturedProducts, getUserCart } from "@/lib/cart.server";
-import { ProductType } from "@/types/cart";
 import { Suspense } from "react";
 
-async function FeaturedProductsCard() {
+async function FeaturedProductsCardWrapper() {
   const { products, cachedAt } = await getFeaturedProducts();
-  return (
-    <Card className="p-4">
-      <CardTitle className="text-lg">🛍️ Featured Products</CardTitle>
-      <CardContent>
-        <ul className="space-y-2">
-          {products.map((product: ProductType) => (
-            <li key={product.id} className="flex justify-between text-sm">
-              {product.name}
-              <span className="font-medium">
-                ${parseFloat(product.price).toFixed(2)}
-              </span>
-            </li>
-          ))}
-        </ul>
-        <p className="text-xs text-muted-foreground mt-3">
-          Cached at: {new Date(cachedAt).toLocaleTimeString()}
-        </p>
-      </CardContent>
-    </Card>
-  );
+  return <FeaturedProductCard products={products} cachedAt={cachedAt} />;
 }
 
 async function UserCartCard() {
@@ -78,7 +59,7 @@ export default function Mistake7Page() {
         <RefreshButton />
 
         <div className="grid grid-cols-2 gap-4 items-start">
-          <FeaturedProductsCard />
+          <FeaturedProductsCardWrapper />
 
           <Suspense fallback={<Skeleton className="w-full h-64" />}>
             <UserCartCard />

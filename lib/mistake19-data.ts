@@ -1,6 +1,5 @@
 import { ProductType } from "@/types/products";
 
-// With caching - fetches once, reused everywhere
 export async function getProductsCached() {
   "use cache";
 
