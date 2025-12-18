@@ -1,4 +1,3 @@
-"use cache";
 import { getCart } from "@/actions/cart-actions";
 import { CartItem } from "@/components/cart-item";
 import { CartItemType } from "@/types/cart";
