@@ -13,6 +13,25 @@ const eslintConfig = defineConfig([
     "build/**",
     "next-env.d.ts",
   ]),
+  {
+    rules: {
+      "react/no-unescaped-entities": [
+        "off",
+        {
+          forbid: [
+            {
+              char: '"',
+              alternatives: ["&quot;", "&ldquo;", "&#34;", "&rdquo;"],
+            },
+            {
+              char: "'",
+              alternatives: ["&apos;", "&lsquo;", "&#39;", "&rsquo;"],
+            },
+          ],
+        },
+      ],
+    },
+  },
 ]);
 
 export default eslintConfig;

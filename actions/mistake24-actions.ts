@@ -26,6 +26,17 @@ export async function createProductAction(
   prevState: unknown,
   formData: FormData
 ) {
+  // verify auth
+  // verify input validation and sanitization
+  // verify authorization
+
+  if (!process.env.AUTH_SECRET) {
+    return {
+      success: false,
+      message: "Unauthorized",
+      error: "Unauthorized",
+    };
+  }
   try {
     const name = formData.get("name") as string;
     const price = formData.get("price") as string;

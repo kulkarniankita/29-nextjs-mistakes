@@ -4,12 +4,6 @@ import { cart } from "@/lib/cart";
 import { revalidatePath } from "next/cache";
 import { CartItemType } from "@/types/cart";
 
-export const getCart = async () => {
-  await new Promise((resolve) => setTimeout(resolve, 3000));
-  // Implement get cart logic
-  return cart;
-};
-
 export const addToCartAction = async (formData: FormData) => {
   const productId = formData.get("productId");
   const product: CartItemType | undefined = cart.items.find(

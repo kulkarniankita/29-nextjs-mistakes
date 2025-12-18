@@ -1,5 +1,5 @@
 "use cache";
-import { getCart } from "@/actions/cart-actions";
+import { getCart } from "@/lib/mistake3/cart.server";
 import { CartItem } from "@/components/cart-item";
 import { CartItemType } from "@/types/cart";
 import { Suspense } from "react";

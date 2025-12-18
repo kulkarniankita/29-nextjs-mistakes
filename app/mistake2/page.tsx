@@ -4,7 +4,7 @@ import { Card } from "@/components/ui/card";
 export default function Mistake2Page() {
   return (
     <div>
-      <h1>Not protecting Server Actions (no auth, no validation)</h1>
+      <h1>Not protecting Server Actions</h1>
       <p className="text-muted-foreground mt-2">
         Treating Server Actions like internal functions, not like publicly
         callable endpoints. Anyone who can trigger the action can hit it (e.g.
