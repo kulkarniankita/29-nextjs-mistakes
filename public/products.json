@@ -5,8 +5,43 @@
     "description": "8"
   },
   {
-    "name": "Modern Full Stack Next.js Course",
+    "name": "Developer to Leader",
     "price": "67",
     "description": "Hello"
+  },
+  {
+    "name": "Modern Full Stack Next.js Course",
+    "price": "299",
+    "description": "Everything you need to master Next.js"
+  },
+  {
+    "name": "Modern Full Stack Next.js Course",
+    "price": "199",
+    "description": "Everything you need to master Next.js Basic Plan"
+  },
+  {
+    "name": "Modern Full Stack Next.js Course",
+    "price": "199",
+    "description": "Everything you need to master Next.js Basic Plan"
+  },
+  {
+    "name": "Modern Full Stack Next.js Course",
+    "price": "199",
+    "description": "Everything you need to master Next.js Basic Plan"
+  },
+  {
+    "name": "Ai Course",
+    "price": "89",
+    "description": "A new course"
+  },
+  {
+    "name": "Ai Course",
+    "price": "89",
+    "description": "A new course"
+  },
+  {
+    "name": "Ai Course",
+    "price": "89",
+    "description": "A new course"
   }
 ]

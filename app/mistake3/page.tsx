@@ -1,7 +1,7 @@
 "use cache";
-import { getCart } from "@/actions/cart-actions";
 import { CartItemType } from "@/types/cart";
 import { CartItem } from "@/components/cart-item";
+import { getCart } from "@/lib/mistake3/cart.server";
 
 export default async function Mistake3Page() {
   const cart = await getCart();
