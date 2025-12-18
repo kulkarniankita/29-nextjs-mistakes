@@ -128,40 +128,6 @@ nextjs-mistakes/
 └── public/                  # Static assets
 ```
 
-## 📚 Covered Mistakes
-
-The repository covers 29 common Next.js mistakes, including but not limited to:
-
-1. **Marking Page.tsx as a Client Component** - Understanding when components should be server vs client
-2. **Improper Server Component Usage** - Common server component mistakes
-3. **Server Actions Organization** - Proper structure for server actions
-4. **Caching Misconfigurations** - Understanding Next.js caching
-5. **Form Handling Patterns** - Correct form submission approaches
-6. **Dynamic Route Implementation** - Proper dynamic routing
-7. **Error Boundary Setup** - Error handling best practices
-8. **Cache Tagging & Refresh** - Using `updateTag` vs `refresh` correctly
-9. **Unnecessary Client Components** - When to avoid "use client"
-10. **Loading States** - Proper loading UI implementation
-11. **Metadata Configuration** - SEO and metadata best practices
-12. **API Route Patterns** - When to use API routes vs Server Actions
-13. **Layout Patterns** - Understanding layout behavior
-14. **Suspense Boundaries** - Proper async component handling
-15. **Cookie & Session Management** - Server-side data handling
-16. **Performance Optimization** - Common performance pitfalls
-17. **Type Safety** - TypeScript best practices
-18. **Route Groups** - Organizing routes effectively
-19. **Parallel Routes** - Advanced routing patterns
-20. **Intercepting Routes** - Modal and overlay patterns
-21. **Error Pages** - Custom error handling
-22. **Loading Pages** - Loading state management
-23. **Server Component Data Fetching** - Proper data fetching patterns
-24. **Client Component Hydration** - Avoiding hydration mismatches
-25. **Middleware Usage** - When and how to use middleware
-26. **Image Optimization** - Next.js Image component best practices
-27. **Font Optimization** - Using next/font correctly
-28. **Environment Variables** - Proper configuration management
-29. **Deployment Considerations** - Production-ready patterns
-
 ## 🎓 How to Use This Repository
 
 1. **Browse Mistakes**: Use the sidebar navigation to explore different mistakes
