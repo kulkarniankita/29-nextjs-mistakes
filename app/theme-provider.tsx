@@ -43,9 +43,13 @@ export default function ThemeProvider({
   useEffect(() => {
     const stored = localStorage.getItem("theme") as Theme | null;
     if (stored) {
-      setTheme(stored);
+      setTimeout(() => {
+        setTheme(stored);
+      }, 0);
     } else if (window.matchMedia("(prefers-color-scheme: light)").matches) {
-      setTheme("light");
+      setTimeout(() => {
+        setTheme("light");
+      }, 0);
     }
   }, []);
 
