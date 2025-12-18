@@ -6,9 +6,9 @@ import Link from "next/link";
 export const generateMetadata = async ({
   params,
 }: {
-  params: Promise<{ id: string }>;
+  params: { id: string };
 }) => {
-  const { id } = await params;
+  const { id } = params;
   const product = await getProductById(id);
   if (!product) {
     return {
@@ -25,16 +25,13 @@ export const generateMetadata = async ({
 export default async function Mistake16Page({
   params,
 }: {
-  params: Promise<{ id: string }>;
+  params: { id: string };
 }) {
-  const { id } = await params;
+  const { id } = params;
   const product = await getProductById(id);
 
   if (!product) {
-    return {
-      title: "Product not found",
-      description: "Product not found",
-    };
+    return <div>Product not found</div>;
   }
   const { name, description, price, quantity } = product;
   return (

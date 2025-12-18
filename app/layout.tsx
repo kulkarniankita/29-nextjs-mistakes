@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { Figtree } from "next/font/google";
 import "./globals.css";
 import { Sidebar } from "@/components/sidebar";
@@ -32,7 +33,9 @@ export default function RootLayout({
             </div>
           </header>
           <main className="px-4 md:px-6 lg:px-8 mx-auto max-w-7xl my-12 flex gap-6">
-            <Sidebar />
+            <Suspense fallback={null}>
+              <Sidebar />
+            </Suspense>
             <div className="flex-1 p-4 border-secondary/10 border-2 rounded-md">
               {children}
             </div>

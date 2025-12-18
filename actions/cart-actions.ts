@@ -25,6 +25,7 @@ export const addToCartAction = async (formData: FormData) => {
       name: `Product ${productId}`,
       price: 400,
       quantity: 1,
+      description: `Description for product ${productId}`,
     });
   }
   revalidatePath("/mistake3");
@@ -47,6 +48,7 @@ export const addToCartWithoutRevalidationAction = async (
       name: `Product ${productId}`,
       price: 400,
       quantity: 1,
+      description: `Description for product ${productId}`,
     });
   }
 };

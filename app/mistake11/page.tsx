@@ -2,6 +2,11 @@ import { signupAction } from "@/actions/signup-actions";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 
+async function signupActionForForm(formData: FormData): Promise<void> {
+  "use server";
+  await signupAction(formData);
+}
+
 export default function Mistake11Page() {
   return (
     <div>
@@ -13,7 +18,7 @@ export default function Mistake11Page() {
         necessary and keep the rest of the tree server-side.
       </p>
 
-      <form action={signupAction} className="flex flex-col gap-2 my-12">
+      <form action={signupActionForForm} className="flex flex-col gap-2 my-12">
         <Input type="email" name="email" placeholder="Email" />
         <Input type="password" name="password" placeholder="Password" />
         <Button type="submit">Sign up</Button>
